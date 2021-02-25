@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 router.get('/:messageId', (req, res) => {
     // TODO: Get the Message object with id matching `req.params.id`
     // using `findOne`
-    Message.findOne({'_id:req.params.messageID'}).then((message)=>{
+    Message.findOne({'_id':req.params.messageID}).then((message)=>{
     // TODO: Return the matching Message object as JSON
         return res.json({message})
     }).catch((err)=> {
